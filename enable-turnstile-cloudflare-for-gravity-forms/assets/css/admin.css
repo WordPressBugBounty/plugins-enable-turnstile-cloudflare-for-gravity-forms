@@ -1,0 +1,35 @@
+.gform-icon-SS88GFFCT-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='38.958' height='41.355' viewBox='0 0 38.958 41.355'%3E%3Cg id='cloudflare-turnstile-seeklogo.com' transform='translate(-7.251 -4.853)'%3E%3Cpath id='Path_1' data-name='Path 1' d='M27.315,7.261A19.45,19.45,0,0,0,13.8,12.178l1.23-6.743-3.193-.582L9.672,16.689l11.84,2.16.582-3.193-6.08-1.11a16.173,16.173,0,1,1-4.982,8.064L7.89,21.786A19.478,19.478,0,1,0,27.315,7.261Z' fill='%23f38020'/%3E%3Cpath id='Path_2' data-name='Path 2' d='M38.847,21.919,35.928,19,24.477,30.452,19.923,25.9,17,28.822l7.483,7.484,2.923-2.923-.011-.012L38.847,21.92Z' fill='%23f38020' fill-rule='evenodd'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-size:contain;
+    background-position:center;
+    background-repeat: no-repeat;
+    width:23px;
+    height:23px;
+    filter: brightness(0);
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.forms_page_gf_settings #tab_ss88gf2fs .gform-settings-panel__content {
+    display:flex;
+    gap:40px;
+}
+.forms_page_gf_settings #tab_ss88gf2fs .gform-settings-field {
+    flex:1;
+}
+
+
+#gform-settings-section-turnstile-settings .gform-settings-panel__content {
+	display:flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#gform-settings-section-turnstile-settings .gform-settings-description {
+    width:100%;
+}
+#gform-settings-section-turnstile-settings .gform-settings-field {
+    width:48%;
+}
