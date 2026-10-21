@@ -2,9 +2,9 @@
 Contributors: SS88_UK
 Donate link: https://paypal.me/SS88/
 Tags: cloudflare, turnstile, gravity forms, captcha, spam protection
-Requires at least: 4.1
+Requires at least: 4.7
 Tested up to: 7.0
-Stable tag: 1.7.1
+Stable tag: 1.8
 Requires PHP: 5.6
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -25,6 +25,7 @@ The Cloudflare Turnstile plugin provides an additional layer of security for you
 
 **Check out our other plugins:**
 
+* 🦄 [Unicorn Panel](https://unicornpanel.com?ref=WordPress&utm_campaign=WPReadme_GFT) - the new web hosting control panel built for multi-server fleets; FREE!
 * 🎉 [Media Library File Size](https://wordpress.org/plugins/media-library-file-size/)
 * ✨ [Export Single Post Page](https://wordpress.org/plugins/single-post-page-export/)
 * 🔒 [Two Factor (2FA) Authentication via Email](https://wordpress.org/plugins/two-factor-2fa-via-email/)
@@ -46,6 +47,21 @@ Use the automatic installer via WordPress or download the plugin and:
 3. 'Theme' and 'Size' settings for the Turnstile field.
 
 == Changelog ==
+
+= 1.8 =
+* Security: Turnstile can no longer be bypassed by hiding the field with conditional logic, visibility settings or a hidden page
+* Security: Escaped and validated all field settings and output
+* Fixed a fatal error when Cloudflare could not be reached
+* Fixed multi-page forms failing when Turnstile was not on the last page
+* Fixed forms asking to solve Turnstile again after another field failed validation
+* Fixed the "Auto" theme always showing the light theme
+* Fixed timed-out Turnstile challenges not resetting
+* Visitors now see a generic error message; admins also see the Cloudflare error, and details are written to the Gravity Forms log
+* The Secret Key is now a password field
+* Better compatibility with script optimisation plugins
+* Removed the conditional logic and visibility settings from the Turnstile field
+* Translation ready
+* Added Unicorn Panel notice
 
 = 1.7.1 =
 * Fixed PHP warnings
@@ -85,3 +101,6 @@ Use the automatic installer via WordPress or download the plugin and:
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.8 =
+Security and reliability update. The Turnstile field no longer supports conditional logic or visibility settings, so it always shows on the form.

@@ -1,15 +1,21 @@
 window.SS88TurnstileCallback = function () {
 
-    jQuery('.gform_wrapper form').each(function() {
+    // api.js may load late (deferred/delayed by optimisation plugins); its onload calls us again.
+    if (typeof window.turnstile === 'undefined') return;
 
-        let Form = jQuery(this);
-        let CFT = Form.find('.cf-turnstile');
+    jQuery('.gform_wrapper form .cf-turnstile').each(function() {
 
-        if(CFT.is(':visible') && CFT.html() == '') {
-        
-            turnstile.render(CFT.get(0));
-    
-        }
+        let CFT = jQuery(this);
+
+        if(!CFT.is(':visible') || CFT.data('ss88-rendered')) return;
+
+        CFT.data('ss88-rendered', true);
+
+        let widgetId = turnstile.render(this, {
+            'timeout-callback': function () {
+                turnstile.reset(widgetId);
+            }
+        });
 
     });
 
